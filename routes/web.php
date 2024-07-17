@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
 
@@ -31,6 +32,7 @@ Route::get('/', function () {
 // routes/web.php
 
 Route::get('/barang', [BarangController::class, 'index']);
+Route::get('/kategori', [KategoriController::class, 'index']);
 
 Route::get('/about', function () {
     return view('about', [
@@ -43,11 +45,11 @@ Route::get('/about', function () {
     ]);
 });
 
-Route::get('/kategori', function () {
-    return view('kategori', [
-        "title" => "Kategori"
-    ]);
-});
+// Route::get('/kategori', function () {
+//     return view('kategori', [
+//         "title" => "Kategori"
+//     ]);
+// });
 
 Route::get('/dashboard', function () {
     return view('dashboard', [

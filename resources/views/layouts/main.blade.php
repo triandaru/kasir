@@ -12,6 +12,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 
@@ -23,20 +24,19 @@
         @include('partials.sidebar')
 
         <div id="content-wrapper" class="d-flex flex-column">
+            @include('partials.navbar')
 
-            <!-- Main Content -->
-            <div id="content">
 
-                @include('partials.navbar')
-                <!-- /.container-fluid -->
 
-                <div class="container-fluid">
-                    @yield('container')
-                </div>
+            <!-- /.container-fluid -->
+
+            <div class="container-fluid">
+                @yield('container')
             </div>
-            <!-- End of Main Content -->
-
         </div>
+        <!-- End of Main Content -->
+
+    </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
