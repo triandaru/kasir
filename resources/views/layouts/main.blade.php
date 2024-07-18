@@ -24,20 +24,22 @@
         @include('partials.sidebar')
 
         <div id="content-wrapper" class="d-flex flex-column">
-            @include('partials.navbar')
+            <div id="content">
+                @include('partials.navbar')
 
 
 
-            <!-- /.container-fluid -->
-
-            <div class="container-fluid">
-                @yield('container')
+                <div class="container-fluid">
+                    @yield('container')
+                </div>
             </div>
+            <!-- End of Main Content -->
         </div>
         <!-- End of Main Content -->
 
     </div>
-    </div>
+    <!-- End of Page Wrapper -->
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
